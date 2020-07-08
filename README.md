@@ -10,7 +10,7 @@
 	1. unzip LeesStore app
 	2. Unzip your app
 	3. Suppose you want to generate a new entity Fig
-	4. run "python generateEntityFromLeesStore.pl Fig Figs (read below for setting up this)
+	4. run "python generateEntityFromLeesStore.py Fig Figs (read below for setting up this)
 	5. go to the angular folder in your app, run the following (you need to do this once)
 		npm install
 		npm install --save @angular/material
@@ -41,12 +41,12 @@
  
  If you want to create a new entity named Fig with its Angular components, run:
             
-            python generateEntityFromLeesStore.pl Fig Figs
+            python generateEntityFromLeesStore.py Fig Figs
 
  If you want to create a new entity named Shelf with its Angular components, run:
 
-            python generateEntityFromLeesStore.pl Shelf Shelves
- If you like, you can also python generateEntityFromLeesStore.pl Shelf Shelfs
+            python generateEntityFromLeesStore.py Shelf Shelves
+ If you like, you can also python generateEntityFromLeesStore.py Shelf Shelfs
  
  You need to enter the USER INPUT below
  
@@ -110,7 +110,7 @@
  
  Run the following command in the folder of this file:
 
-                                  python generateEntityFromLeesStore.pl Fig Figs
+                                  python generateEntityFromLeesStore.py Fig Figs
  
  
  Add migrations, update database

@@ -73,13 +73,13 @@
 
 ############  USER INPUT ###########
 # the root directory of your app that contains the angular and aspnet-core folders
-target_dir = "C:\\MyProjects\\Sample\\5.6.0\\"
+target_dir = "..\\"
 
 # the namespace of your solution
-solutionName = "Sample"
+solutionName = "LeesStore"
 
 # the root directory of the app, from which you will copy a ready-to0use entity, that contains the angular and aspnet-core folders
-source_dir = "C:\\temp\\LeesStore-product-crud\\"
+source_dir = "..\\"
 
 # the name space of the app you will copy from
 sourceSolutionName = "LeesStore"
@@ -101,7 +101,7 @@ groupEntities = False
 
 # OPTIONAL: To add table to database, permissions, item to nav bar etc, set the following to True, and add the following lines
 # to your corresponsing files
-generateRemaining = True;
+generateRemaining = True
 # If you are using Angular 9xxx, set the following to true
 correctForNg9 = True
 
@@ -266,9 +266,6 @@ fromDirectory = source_dir + "angular\\src\\app\\" + entities
 copy_tree(fromDirectory, toDirectory)
 
 
-# rename files
-rename_files(new_model,toDirectory)
-
 # replace model name
 recursive_replace(toDirectory,Entity,New_model)
 recursive_replace(toDirectory,entity,new_model)
@@ -374,7 +371,7 @@ if generateRemaining:
     
     # Add to menu on the sidebar
     ngDirectory = target_dir + "angular\\src\\app\\layout"
-    path = os.path.join( ngDirectory, "sidebar-menu.component.ts" )
+    path = os.path.join( ngDirectory, "sidebar-nav.component.ts" )
     marker = addMenuItem
     addLine = "      new MenuItem(this.l('" + New_models + "'),'/app/" + new_models + "','fas fa-building','Pages." + New_models + "'),"
     emptyspace = ""
